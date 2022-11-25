@@ -11,6 +11,8 @@ class LsFormHistoryController extends State<LsFormHistoryView>
   @override
   void initState() {
     instance = this;
+     name = FormHistoryService.name;
+    address = FormHistoryService.address;
     super.initState();
   }
 

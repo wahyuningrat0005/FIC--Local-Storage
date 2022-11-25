@@ -1,0 +1,30 @@
+{
+    "modules": [
+        "tutorial/fic/fic_counter",
+        "tutorial/fic/fic_loading",
+        "tutorial/fic/fic_enable_or_disabled",
+        "tutorial/fic/fic_visibility",
+        "tutorial/fic/fic_animation",
+        "tutorial/fic/fic_navigation",
+        "tutorial/fic/fic_cart",
+        "tutorial/fic/fic_filter_list",
+        "tutorial/fic/fic_theme",
+        "tutorial/http_login",
+        "tutorial/http_product_list",
+        "tutorial/http_product_form",
+        "tutorial/tf_login",
+        "tutorial/tf_register",
+        "tutorial/tf_product_list",
+        "tutorial/tf_product_form",
+        "tutorial/ui_dailiy_todo_list",
+        "tutorial/app/tiktok/tk_main_navigation",
+        "tutorial/app/tiktok/tk_dashboard",
+        "tutorial/app/ovo/ovo_dashboard",
+        "tutorial/acak/ack_tutorial_cart",
+        "tutorial/ls_login",
+        "tutorial/ls_theme",
+        "tutorial/ls_product_list",
+        "tutorial/ls_product_form",
+        "tutorial/ls_form_history"
+    ]
+}

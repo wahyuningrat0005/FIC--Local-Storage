@@ -10,7 +10,13 @@ import 'package:path_provider/path_provider.dart';
 
 ! Link Komunitas FUGI
 ? https://tinyurl.com/join-fugi
+
+1. HTTP
+2. Local Storage
 */
+
+// ! Lihat menu tugas disini:
+var t = TrController();
 
 void main() async {
   await initialize();

@@ -1,7 +1,13 @@
 import 'package:example/core.dart';
+import 'package:example/session.dart';
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:path_provider/path_provider.dart';
+
+/*
+! Link Komunitas FUGI
+? https://tinyurl.com/join-fugi
+*/
 
 void main() async {
   await initialize();
@@ -14,12 +20,30 @@ void main() async {
   await ThemeService.load();
   await LocalProductService.load();
   await FormHistoryService.load();
+  AppSession.token = await mainStorage.get("token");
+
+  // print("mainStorage.isOpen: ${mainStorage.isOpen}");
+  // print("storage: ${await mainStorage.get("token")}");
+  // print("-----");
+  // await mainStorage.put("mode", "JRocks");
 
   return runApp(MaterialApp(
     title: 'Capek Ngoding',
     navigatorKey: Get.navigatorKey,
     debugShowCheckedModeBanner: false,
     theme: ThemeData.dark(),
+    // home: const TemplateCardView(),
+    // home: const AckTutorialCartView(),
+    // home: const TrBasicWidgetView(),
+    // home: const TrExampleView(),
     home: const TrView(),
+    // home: const UiDailiyTodoListView(),
+    // home: const LifeCycleDemoView(),
+  ));
+
+  runApp(MaterialApp.router(
+    title: 'Capek Ngoding',
+    debugShowCheckedModeBanner: false,
+    routerConfig: getRouters(),
   ));
 }

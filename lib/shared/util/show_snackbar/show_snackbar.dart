@@ -1,5 +1,4 @@
 import 'package:example/core.dart';
-import 'package:example/shared/widget/theme_editor/themes/theme.dart';
 import 'package:flutter/material.dart';
 
 snackbarSuccess(String message) {

@@ -75,6 +75,21 @@ class ServiceExampleView extends StatelessWidget {
 
   doUploadToImgBB() async {
     {
+      //#TEMPLATE get_image_with_file_picker
+      FilePickerResult? result = await FilePicker.platform.pickFiles(
+        type: FileType.custom,
+        allowedExtensions: [
+          "png",
+          "jpg",
+        ],
+        allowMultiple: false,
+      );
+      if (result == null) return;
+      File file = File(result.files.single.path!);
+      String filePath = file.path;
+      //#END
+    }
+    {
       //#TEMPLATE get_image_gallery
       XFile? image = await ImagePicker().pickImage(
         source: ImageSource.gallery,

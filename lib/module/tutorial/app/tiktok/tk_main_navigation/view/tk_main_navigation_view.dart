@@ -1,8 +1,8 @@
-import 'package:example/module/tutorial/app/tiktok/tk_main_navigation/widget/rotated_circle_avatar.dart';
+
 import 'package:flutter/material.dart';
 import 'package:example/core.dart';
-import '../controller/tk_main_navigation_controller.dart';
-import '../widget/sliding_text.dart';
+
+
 
 class TkMainNavigationView extends StatefulWidget {
   const TkMainNavigationView({Key? key}) : super(key: key);

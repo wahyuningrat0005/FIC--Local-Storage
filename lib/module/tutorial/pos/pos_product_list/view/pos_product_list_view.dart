@@ -1,4 +1,4 @@
-import 'package:example/module/tutorial/pos/pos_product_list/widget/pos_product_item.dart';
+
 import 'package:flutter/material.dart';
 import 'package:example/core.dart';
 

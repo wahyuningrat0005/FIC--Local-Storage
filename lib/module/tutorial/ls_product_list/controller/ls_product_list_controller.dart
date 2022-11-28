@@ -1,9 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:example/state_util.dart';
-import '../../../../service/local_product_service.dart';
-import '../view/ls_product_list_view.dart';
+import 'package:example/core.dart';
 
 class LsProductListController extends State<LsProductListView>
     implements MvcController {

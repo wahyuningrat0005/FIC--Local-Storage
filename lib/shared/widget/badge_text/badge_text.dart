@@ -1,7 +1,7 @@
 import 'package:badges/badges.dart';
-import 'package:flutter/material.dart';
+import 'package:example/core.dart';
 
-import '../theme_editor/themes/theme.dart';
+import 'package:flutter/material.dart';
 
 class BadgeText extends StatefulWidget {
   final Color? backgroundColor;

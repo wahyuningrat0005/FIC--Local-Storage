@@ -20,8 +20,8 @@ dependencies:
   material_design_icons_flutter: ^5.0.6996
   image_picker: ^0.8.5+3
   dio: ^4.0.6
-  file_picker: ^3.0.4
-  file_picker_cross: ^4.4.2
+  file_picker: ^5.2.2
+  # file_picker_cross: ^4.4.2
   uuid: ^3.0.6
   flutter_image_compress: ^1.1.3
   cached_network_image: ^3.2.2
@@ -43,6 +43,8 @@ dependencies:
   firebase_core: ^2.3.0
   cloud_firestore: ^4.1.0
   firebase_auth: ^4.1.3
+  faker_dart: ^0.1.11
+  syncfusion_flutter_charts: ^20.3.58
   
 # dependency_overrides:
 #   google_sign_in_web:

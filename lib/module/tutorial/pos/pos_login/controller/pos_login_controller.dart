@@ -1,7 +1,7 @@
 import 'package:example/core.dart';
 import 'package:flutter/material.dart';
-import 'package:example/state_util.dart';
-import '../view/pos_login_view.dart';
+
+
 
 class PosLoginController extends State<PosLoginView> implements MvcController {
   static late PosLoginController instance;

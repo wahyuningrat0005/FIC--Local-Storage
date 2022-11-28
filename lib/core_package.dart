@@ -8,7 +8,6 @@ export 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 export 'package:image_picker/image_picker.dart';
 export 'package:dio/dio.dart';
 export 'package:file_picker/file_picker.dart';
-export 'package:file_picker_cross/file_picker_cross.dart';
 export 'package:uuid/uuid.dart';
 export 'package:flutter_image_compress/flutter_image_compress.dart';
 export 'package:cached_network_image/cached_network_image.dart';

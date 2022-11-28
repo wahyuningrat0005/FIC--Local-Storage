@@ -6,7 +6,6 @@ import 'package:path/path.dart' as path;
 import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
 
-FilePickerCross? pickedFileInImagePicker;
 FilePickerResult? filePickerResult;
 
 class ExImagePicker extends StatefulWidget {
@@ -38,7 +37,6 @@ class _ExImagePickerState extends State<ExImagePicker>
   @override
   void initState() {
     super.initState();
-    pickedFileInImagePicker = null;
     imageUrl = widget.value;
     Input.set(widget.id, imageUrl);
     Input.inputController[widget.id] = this;

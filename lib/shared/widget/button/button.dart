@@ -1,6 +1,5 @@
+import 'package:example/core.dart';
 import 'package:flutter/material.dart';
-
-import '../theme_editor/themes/theme.dart';
 
 class ExButton extends StatelessWidget {
   final String? label;

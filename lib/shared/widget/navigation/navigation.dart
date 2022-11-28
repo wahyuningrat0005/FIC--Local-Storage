@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../theme_editor/themes/theme.dart';
+import '../../../core.dart';
 
 class ExNavigationItem {
   final String? label;

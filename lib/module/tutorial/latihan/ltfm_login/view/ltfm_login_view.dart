@@ -16,18 +16,15 @@ class LtfmLoginView extends StatefulWidget {
         child: Container(
           padding: const EdgeInsets.all(10.0),
           child: Column(
-            children: [
-              //! 1. Ini adalah kode untuk membuat textfield email dengan reuseable widget
-              QTextField(
-                value: "demo@gmail.com",
-                label: "Email",
-                hint: "Your email",
-                onChanged: (value) {},
-              ),
+            children: const [
+              //! 1. Buat sebuah textfield dengan property berikut:
+              // snippet: q_textfield
+              // value: admin@demo.com
+              // label: Email
 
-              //! 2. Buat kode yang sama, atur value-nya menjadi:
+              //! 2. Buat sebuah textfield dengan property berikut:
+              // snippet: q_password
               // value: 123456
-              // hint: Your password
               // label: Password
 
               //! 3. Buat sebuah tombol,

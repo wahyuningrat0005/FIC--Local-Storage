@@ -1,7 +1,7 @@
-import 'package:example/service/local_product_service.dart';
+
 import 'package:flutter/material.dart';
 import 'package:example/core.dart';
-import '../controller/ls_product_list_controller.dart';
+
 
 class LsProductListView extends StatefulWidget {
   const LsProductListView({Key? key}) : super(key: key);

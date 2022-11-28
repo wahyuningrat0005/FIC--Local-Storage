@@ -16,7 +16,7 @@ class Validator {
     dynamic value, {
     String? fieldName,
   }) {
-    if (value is String) {
+    if (value is String || value == null) {
       if (value.toString() == "null") return "This field is required";
       if (value.isEmpty) return "This field is required";
     }

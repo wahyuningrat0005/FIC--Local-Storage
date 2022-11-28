@@ -22,6 +22,7 @@ class TutorialNavigationItem extends StatelessWidget {
       height: size,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
+          padding: const EdgeInsets.all(2.0),
           backgroundColor: color ?? Colors.orange[900],
         ),
         onPressed: () {

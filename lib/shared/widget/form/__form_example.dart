@@ -1,4 +1,5 @@
 import 'package:example/core.dart';
+import 'package:example/shared/widget/form/image_picker.dart';
 import 'package:flutter/material.dart';
 
 class FormExampleView extends StatefulWidget {
@@ -120,6 +121,25 @@ class FormExampleViewState extends State<FormExampleView> {
                       fontSize: 20.0,
                       fontWeight: FontWeight.bold,
                     ),
+                  ),
+                  QImagePicker(
+                    label: "Photo",
+                    hint: "Your photo",
+                    validator: Validator.required,
+                    value:
+                        "https://i.ibb.co/SnzPNqd/photo-1576570734316-e9d0317d7384-crop-entropy-cs-tinysrgb-fit-max-fm-jpg-ixid-Mnwy-ODA4-ODh8-MHwxf-H.jpg",
+                    onChanged: (value) {
+                      print("photo: $value");
+                    },
+                  ),
+                  QImagePicker(
+                    label: "Your alternative photo",
+                    hint: "Alternative photo",
+                    validator: Validator.required,
+                    value: null,
+                    onChanged: (value) {
+                      print("photo: $value");
+                    },
                   ),
                   QTextField(
                     label: "Email",

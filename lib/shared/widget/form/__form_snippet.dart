@@ -1,15 +1,18 @@
 //#GROUP_TEMPLATE q_form
 import 'package:example/core.dart';
+import 'package:example/shared/widget/form/image_picker.dart';
 import 'package:flutter/material.dart';
 
 class FormExampleWithSnippetView extends StatefulWidget {
   const FormExampleWithSnippetView({Key? key}) : super(key: key);
 
   @override
-  State<FormExampleWithSnippetView> createState() => FormExampleWithSnippetViewState();
+  State<FormExampleWithSnippetView> createState() =>
+      FormExampleWithSnippetViewState();
 }
 
-class FormExampleWithSnippetViewState extends State<FormExampleWithSnippetView> {
+class FormExampleWithSnippetViewState
+    extends State<FormExampleWithSnippetView> {
   static late FormExampleWithSnippetViewState instance;
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
   bool lightMode = false;
@@ -202,6 +205,15 @@ class FormExampleWithSnippetViewState extends State<FormExampleWithSnippetView> 
                       }
                     ],
                     onChanged: (value, label) {},
+                  ),
+                  //#END
+                  //#TEMPLATE q_image_picker
+                  QImagePicker(
+                    label: "Photo",
+                    hint: "Your photo",
+                    validator: Validator.required,
+                    value: null,
+                    onChanged: (value) {},
                   ),
                   //#END
                   //#TEMPLATE q_check

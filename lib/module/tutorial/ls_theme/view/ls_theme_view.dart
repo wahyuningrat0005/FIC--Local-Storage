@@ -1,7 +1,7 @@
-import 'package:example/service/theme_service.dart';
+
 import 'package:flutter/material.dart';
 import 'package:example/core.dart';
-import '../controller/ls_theme_controller.dart';
+
 
 class LsThemeView extends StatefulWidget {
   const LsThemeView({Key? key}) : super(key: key);

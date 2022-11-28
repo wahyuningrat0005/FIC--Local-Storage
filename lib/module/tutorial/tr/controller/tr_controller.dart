@@ -371,4 +371,94 @@ class TrController extends State<TrView> implements MvcController {
       "view": const LtfmSlidingFormView(),
     },
   ];
+
+  List httpExerciseList = [
+    {
+      "label": "Login",
+      "view": const HtLoginView(),
+    },
+    {
+      "label": "Product List",
+      "view": const HtProductListView(),
+    },
+    {
+      "label": "Dashboard",
+      "view": const HtDashboardView(),
+    },
+    {
+      "label": "Image Galleries",
+      "view": const HtImageGalleriesView(),
+    },
+    {
+      "label": "Statistic Card",
+      "view": const HtStatisticCardView(),
+    },
+    {
+      "label": "Line Chart",
+      "view": const HtLineChartView(),
+    },
+    {
+      "label": "Pie Chart",
+      "view": const HtPieChartView(),
+    },
+    {
+      "label": "Todolist",
+      "view": const HtTodoListView(),
+    },
+    {
+      "label": "Product CRUD",
+      "view": const HtProductCrudListView(),
+    },
+    {
+      "label": "Map Marker",
+      "view": const HtMapMarkerView(),
+    },
+  ];
+
+  List lsExerciseList = [
+    {
+      "label": "First Time Setup",
+      "view": const LsFirstTimeSetupView(),
+    },
+    {
+      "label": "Login Form with History",
+      "view": const LsLoginFormWithHistoryView(),
+    },
+    {
+      "label": "Login and Save Token",
+      "view": const LsLoginAndSaveTokenView(),
+    },
+    {
+      "label": "Create PIN",
+      "view": const LsCreatePinView(),
+    },
+    {
+      "label": "Login by PIN",
+      "view": const LsLoginByPinView(),
+    },
+    {
+      "label": "Customer CRUD",
+      "view": const LsCustomerCrudView(),
+    },
+    {
+      "label": "Product CRUD",
+      "view": const LsProductCrudView(),
+    },
+    {
+      "label": "POS",
+      "view": const LsPosView(),
+    },
+    {
+      "label": "POS with Table Selection",
+      "view": const LsPosWithTableSelectionView(),
+    },
+    {
+      "label": "Favorite",
+      "view": const LsFavoriteView(),
+    },
+    {
+      "label": "User Setting",
+      "view": const LsUserSettingView(),
+    },
+  ];
 }

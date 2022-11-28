@@ -1,7 +1,7 @@
 import 'package:example/core.dart';
 import 'package:flutter/material.dart';
 
-void showInfoDialog(String message) async {
+Future showInfoDialog(String message) async {
   await showDialog<void>(
     context: globalContext,
     barrierDismissible: true,

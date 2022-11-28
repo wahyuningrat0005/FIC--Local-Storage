@@ -1,9 +1,5 @@
-import 'package:example/module/tutorial/fic/fic_theme/theme/dark_theme.dart';
-import 'package:example/module/tutorial/fic/fic_theme/theme/light_theme.dart';
-import 'package:example/module/tutorial/fic/fic_theme/theme/purple_theme.dart';
+import 'package:example/core.dart';
 import 'package:flutter/material.dart';
-import 'package:example/state_util.dart';
-import '../view/fic_theme_view.dart';
 
 class FicThemeController extends State<FicThemeView> implements MvcController {
   static late FicThemeController instance;

@@ -1,7 +1,6 @@
 import 'package:example/core.dart';
 import 'package:flutter/material.dart';
 
-import '../shared/util/theme/green_theme.dart';
 import '../shared/util/theme/light_theme.dart';
 
 class ThemeService {
@@ -10,7 +9,7 @@ class ThemeService {
   static List themeList = [
     getLightTheme(),
     getDarkTheme(),
-    getGreenTheme(),
+    getOrangeTheme(),
   ];
 
   static ThemeData get theme {

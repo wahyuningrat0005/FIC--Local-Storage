@@ -106,6 +106,11 @@ class TrView extends StatefulWidget {
                 color: Colors.red,
               ),
               TrList(
+                title: "Coontextless Tutorial",
+                items: controller.contextLessMenuItems,
+                color: Colors.blueAccent,
+              ),
+              TrList(
                 title: "UI Example",
                 items: controller.uiExampleItems,
                 color: Colors.cyan,

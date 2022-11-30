@@ -52,6 +52,16 @@
         "exercise/ht_product_crud_list",
         "exercise/ht_product_crud_form",
         "exercise/ht_map_marker",
-        "tutorial/tr_example"
+        "tutorial/tr_example",
+        "tutorial/tf_product_form",
+        "tutorial/tf_dashboard",
+        "tutorial/tf_profile",
+        "tutorial/tf_main_navigation",
+        "tutorial/tf_user_list",
+        "tutorial/tc_navigation",
+        "tutorial/tc_dialog",
+        "tutorial/tc_bottom_sheet",
+        "tutorial/tc_snackbar",
+        "tutorial/tc_dashboard"
     ]
 }

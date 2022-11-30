@@ -3,7 +3,6 @@ import 'dart:math';
 import 'package:example/config.dart';
 import 'package:example/core.dart';
 import 'package:flutter/material.dart';
-import '../../../../model/sales_data.dart';
 
 class HtLineChartController extends State<HtLineChartView>
     implements MvcController {

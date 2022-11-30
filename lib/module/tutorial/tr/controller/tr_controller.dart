@@ -239,20 +239,28 @@ class TrController extends State<TrView> implements MvcController {
 
   List firebaseExampleItems = [
     {
+      "label": "Register",
+      "view": const TfRegisterView(),
+    },
+    {
       "label": "Login",
       "view": const TfLoginView(),
     },
     {
-      "label": "Register",
-      "view": const TfRegisterView(),
+      "label": "Dashboard",
+      "view": const TfDashboardView(),
+    },
+    {
+      "label": "Profile",
+      "view": const TfProfileView(),
     },
     {
       "label": "Product List",
       "view": const TfProductListView(),
     },
     {
-      "label": "Product Form",
-      "view": const TfProductFormView(),
+      "label": "User List",
+      "view": const TfUserListView(),
     },
   ];
 
@@ -459,6 +467,25 @@ class TrController extends State<TrView> implements MvcController {
     {
       "label": "User Setting",
       "view": const LsUserSettingView(),
+    },
+  ];
+
+  List contextLessMenuItems = [
+    {
+      "label": "Navigation",
+      "view": const TcNavigationView(),
+    },
+    {
+      "label": "Dialog",
+      "view": const TcDialogView(),
+    },
+    {
+      "label": "Bottom Sheeet",
+      "view": const TcBottomSheetView(),
+    },
+    {
+      "label": "Snackbar",
+      "view": const TcSnackbarView(),
     },
   ];
 }

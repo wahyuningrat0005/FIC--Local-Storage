@@ -7,88 +7,156 @@ class TrExampleView extends StatefulWidget {
   Widget build(context, TrExampleController controller) {
     controller.view = this;
 
+    /*
+    ! Perlu banyak latihan
+    ! Ngoding itu kayak main gitar
+    ! Gak mungkin kita bisa main gitar
+    ! Kalo kita cuman baca buku gitar
+    ! Dan kita jarang mainin gitar-nya
+    ---
+    ! 100 jam pertama
+    ! 1000 jam pertama
+    ! 10000 jam
+    ---
+    SKILL
+    EXPERIENCE
+    */
+
     return Scaffold(
       appBar: AppBar(
         title: const Text("TrExample"),
-        actions: const [],
+        actions: [
+          IconButton(
+            onPressed: () => controller.generate(),
+            icon: const Icon(
+              Icons.data_array,
+              size: 24.0,
+            ),
+          ),
+        ],
       ),
-      body: SingleChildScrollView(
-        child: Container(
-          padding: const EdgeInsets.all(20.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              //ALT+SHIFT+V
-              ListView.builder(
-                itemCount: 10,
-                shrinkWrap: true,
-                itemBuilder: (context, index) {
-                  var item = {};
-                  return Card(
-                    clipBehavior: Clip.antiAlias,
-                    child: SizedBox(
-                      width: 300.0,
-                      child: Row(
+      body: Container(
+        padding: const EdgeInsets.all(20.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            ValueListenableBuilder(
+              valueListenable: controller.counter,
+              builder: (context, counter, _) {
+                return Text(
+                  "Counter: $counter",
+                  style: const TextStyle(
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                );
+              },
+            ),
+            ElevatedButton.icon(
+              icon: const Icon(Icons.add),
+              label: const Text("Add"),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blueGrey,
+              ),
+              onPressed: () {
+                controller.counter.value++;
+                // controller.setState(() {});
+              },
+            ),
+            Card(
+              child: Container(
+                width: MediaQuery.of(context).size.width,
+                padding: const EdgeInsets.all(20.0),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Container(
-                            width: 80.0,
-                            height: 80.0,
-                            decoration: const BoxDecoration(
-                              image: DecorationImage(
-                                image: NetworkImage(
-                                  "https://i.ibb.co/dGcQ5bw/photo-1549692520-acc6669e2f0c-ixlib-rb-1-2.jpg",
-                                ),
-                                fit: BoxFit.cover,
-                              ),
+                          const Text(
+                            "Employees",
+                            style: TextStyle(
+                              fontSize: 12.0,
                             ),
                           ),
-                          Expanded(
-                            child: Container(
-                              padding: const EdgeInsets.all(12.0),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Row(
-                                    children: const [
-                                      Text(
-                                        "PRODUCTIVITY",
-                                        style: TextStyle(
-                                          fontSize: 12.0,
-                                        ),
-                                      ),
-                                      Spacer(),
-                                      Text(
-                                        "3 days ago",
-                                        style: TextStyle(
-                                          fontSize: 10.0,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                  const SizedBox(
-                                    height: 6.0,
-                                  ),
-                                  const Text(
-                                    "7 Skills of Highly Effective Programmers",
-                                    maxLines: 2,
-                                    overflow: TextOverflow.ellipsis,
-                                    style: TextStyle(
-                                      fontSize: 12.0,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                ],
+                          const SizedBox(
+                            height: 6.0,
+                          ),
+                          Row(
+                            children: [
+                              Text(
+                                "${controller.employeeCount}",
+                                style: const TextStyle(
+                                  fontSize: 20.0,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
-                            ),
+                            ],
                           ),
                         ],
+                      ),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.all(10.0),
+                      decoration: const BoxDecoration(
+                        color: Colors.blue,
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(
+                            8.0,
+                          ),
+                        ),
+                      ),
+                      child: const Icon(
+                        Icons.people,
+                        size: 24.0,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            //ALT+SHIFT+V
+            Expanded(
+              child: ListView.builder(
+                itemCount: controller.employeeList.length,
+                itemBuilder: (context, index) {
+                  var item = controller.employeeList[index];
+                  return Dismissible(
+                    key: UniqueKey(),
+                    onDismissed: (detail) {},
+                    confirmDismiss: (direction) async {
+                      bool confirm = await showConfirmationDialog();
+                      if (confirm) {
+                        controller.delete(item);
+                        return Future.value(true);
+                      }
+                      return Future.value(false);
+                    },
+                    child: Card(
+                      child: ListTile(
+                        leading: CircleAvatar(
+                          backgroundColor: Colors.grey[200],
+                          backgroundImage: NetworkImage(
+                            item["photo"],
+                          ),
+                        ),
+                        title: Text("${item["name"]}"),
+                        subtitle: Text("${item["email"]}"),
+                        trailing: IconButton(
+                          onPressed: () => controller.update(item),
+                          icon: const Icon(
+                            Icons.edit,
+                            size: 24.0,
+                          ),
+                        ),
                       ),
                     ),
                   );
                 },
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

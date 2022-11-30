@@ -5,20 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:path_provider/path_provider.dart';
 
-/*
-! Link Repo
-? https://github.com/denyocrworld/tutorial
-
-! Link Komunitas FUGI
-? https://tinyurl.com/join-fugi
-
-1. HTTP
-2. Local Storage
-*/
-
-// ! Lihat menu tugas disini:
-var t = TrController();
-
 void main() async {
   await initialize();
   // windows, android, ios

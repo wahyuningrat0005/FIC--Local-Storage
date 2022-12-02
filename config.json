@@ -62,6 +62,12 @@
         "tutorial/tc_dialog",
         "tutorial/tc_bottom_sheet",
         "tutorial/tc_snackbar",
-        "tutorial/tc_dashboard"
+        "tutorial/tc_dashboard",
+        "tutorial/crud_generator/cg_main_navigation",
+        "tutorial/crud_generator/cg_dashboard",
+        "tutorial/crud_generator/cg_module_list",
+        "tutorial/crud_generator/cg_module_form",
+        "tutorial/crud_generator/cg_crud_list",
+        "tutorial/crud_generator/cg_crud_form"
     ]
 }

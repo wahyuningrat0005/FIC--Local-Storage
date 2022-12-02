@@ -1205,77 +1205,109 @@ getRouters({
             ),
           ),
           GoRoute(
-      path: '/tf_dashboard',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const TfDashboardView(),
-      ),
-    ),
+            path: '/tf_dashboard',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TfDashboardView(),
+            ),
+          ),
           GoRoute(
-      path: '/tf_profile',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const TfProfileView(),
-      ),
-    ),
+            path: '/tf_profile',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TfProfileView(),
+            ),
+          ),
           GoRoute(
-      path: '/tf_main_navigation',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const TfMainNavigationView(),
-      ),
-    ),
+            path: '/tf_main_navigation',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TfMainNavigationView(),
+            ),
+          ),
           GoRoute(
-      path: '/tf_user_list',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const TfUserListView(),
-      ),
-    ),
+            path: '/tf_user_list',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TfUserListView(),
+            ),
+          ),
           GoRoute(
-      path: '/tc_navigation',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const TcNavigationView(),
-      ),
-    ),
+            path: '/tc_navigation',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TcNavigationView(),
+            ),
+          ),
           GoRoute(
-      path: '/tc_dialog',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const TcDialogView(),
-      ),
-    ),
+            path: '/tc_dialog',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TcDialogView(),
+            ),
+          ),
           GoRoute(
-      path: '/tc_bottom_sheet',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const TcBottomSheetView(),
-      ),
-    ),
+            path: '/tc_bottom_sheet',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TcBottomSheetView(),
+            ),
+          ),
           GoRoute(
-      path: '/tc_snackbar',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const TcSnackbarView(),
-      ),
-    ),
+            path: '/tc_snackbar',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TcSnackbarView(),
+            ),
+          ),
           GoRoute(
-      path: '/tc_dashboard',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const TcDashboardView(),
-      ),
-    ),
+            path: '/tc_dashboard',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TcDashboardView(),
+            ),
+          ),
+          GoRoute(
+            path: '/cg_main_navigation',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const CgMainNavigationView(),
+            ),
+          ),
+          GoRoute(
+            path: '/cg_dashboard',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const CgDashboardView(),
+            ),
+          ),
+          GoRoute(
+            path: '/cg_module_list',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const CgModuleListView(),
+            ),
+          ),
+          GoRoute(
+            path: '/cg_module_form',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const CgModuleFormView(),
+            ),
+          ),
           //@ROUTER_GENERATOR
         ],
       ),

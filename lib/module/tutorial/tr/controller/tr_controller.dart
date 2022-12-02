@@ -488,4 +488,11 @@ class TrController extends State<TrView> implements MvcController {
       "view": const TcSnackbarView(),
     },
   ];
+
+  List randomAppItems = [
+    {
+      "label": "Crud Generator",
+      "view": const CgMainNavigationView(),
+    },
+  ];
 }

@@ -120,6 +120,18 @@ export 'package:example/module/tutorial/app/tiktok/tk_main_navigation/controller
 export 'package:example/module/tutorial/app/tiktok/tk_main_navigation/view/tk_main_navigation_view.dart';
 export 'package:example/module/tutorial/app/tiktok/tk_main_navigation/widget/rotated_circle_avatar.dart';
 export 'package:example/module/tutorial/app/tiktok/tk_main_navigation/widget/sliding_text.dart';
+export 'package:example/module/tutorial/crud_generator/cg_crud_form/controller/cg_crud_form_controller.dart';
+export 'package:example/module/tutorial/crud_generator/cg_crud_form/view/cg_crud_form_view.dart';
+export 'package:example/module/tutorial/crud_generator/cg_crud_list/controller/cg_crud_list_controller.dart';
+export 'package:example/module/tutorial/crud_generator/cg_crud_list/view/cg_crud_list_view.dart';
+export 'package:example/module/tutorial/crud_generator/cg_dashboard/controller/cg_dashboard_controller.dart';
+export 'package:example/module/tutorial/crud_generator/cg_dashboard/view/cg_dashboard_view.dart';
+export 'package:example/module/tutorial/crud_generator/cg_main_navigation/controller/cg_main_navigation_controller.dart';
+export 'package:example/module/tutorial/crud_generator/cg_main_navigation/view/cg_main_navigation_view.dart';
+export 'package:example/module/tutorial/crud_generator/cg_module_form/controller/cg_module_form_controller.dart';
+export 'package:example/module/tutorial/crud_generator/cg_module_form/view/cg_module_form_view.dart';
+export 'package:example/module/tutorial/crud_generator/cg_module_list/controller/cg_module_list_controller.dart';
+export 'package:example/module/tutorial/crud_generator/cg_module_list/view/cg_module_list_view.dart';
 export 'package:example/module/tutorial/fic/fic_animation/controller/fic_animation_controller.dart';
 export 'package:example/module/tutorial/fic/fic_animation/view/fic_animation_view.dart';
 export 'package:example/module/tutorial/fic/fic_cart/controller/fic_cart_controller.dart';
@@ -348,6 +360,7 @@ export 'package:example/shared/util/firebase_notification/firebase_notification.
 export 'package:example/shared/util/firebase_notification/notification_controller.dart';
 export 'package:example/shared/util/focus_helper/focus_helper.dart';
 export 'package:example/shared/util/input/input.dart';
+export 'package:example/shared/util/random_image/random_image.dart';
 export 'package:example/shared/util/responsive/responsive.dart';
 export 'package:example/shared/util/show_loading/show_loading.dart';
 export 'package:example/shared/util/show_snackbar/show_snackbar.dart';

@@ -120,6 +120,11 @@ class TrView extends StatefulWidget {
                 items: controller.localStorageItems,
                 color: Colors.brown,
               ),
+              TrList(
+                title: "Ramdom Apps",
+                items: controller.randomAppItems,
+                color: Colors.black,
+              ),
               title("Exercise"),
               TrList(
                 title: "State Management Exercise",

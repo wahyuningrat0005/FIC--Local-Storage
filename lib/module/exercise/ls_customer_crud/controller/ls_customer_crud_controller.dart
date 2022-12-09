@@ -26,6 +26,7 @@ class LsCustomerCrudController extends State<LsCustomerCrudView>
 
   loadCustomerList() async {
     ready = true;
+
     /*
     TODO: --
     1. Ok, baca storage "customers" dan masukkan ke dalam List
@@ -35,6 +36,8 @@ class LsCustomerCrudController extends State<LsCustomerCrudView>
 
     2. Panggil setState setelah-nya!
     */
+    customerList = mainStorage.get("customers") ?? [];
+    setState(() {});
   }
 
   addCustomer(Map newCustomer) async {
@@ -58,6 +61,9 @@ class LsCustomerCrudController extends State<LsCustomerCrudView>
 
     6. Selalu panggil function di atas, untuk menyimpannya ke storage. >_<
     */
+    customerList.add(newCustomer);
+    setState(() {});
+    saveCustomerList();
   }
 
   delete(item) {
@@ -72,6 +78,9 @@ class LsCustomerCrudController extends State<LsCustomerCrudView>
 
     9. Panggil function saveCustomerList();
     */
+    customerList.remove(item);
+    setState(() {});
+    saveCustomerList();
   }
 
   edit(item) {
@@ -97,6 +106,9 @@ class LsCustomerCrudController extends State<LsCustomerCrudView>
     Apakah data yang kamu ubah masih muncul?
     Jika ya, task ini selesai! 
     */
+    item["customer_name"] = faker.name.firstName();
+    setState(() {});
+    saveCustomerList();
   }
 
   saveCustomerList() {

@@ -1,4 +1,5 @@
 import 'package:example/core.dart';
+import 'package:example/main.dart';
 import 'package:flutter/material.dart';
 
 class LsCreatePinController extends State<LsCreatePinView>
@@ -55,5 +56,13 @@ class LsCreatePinController extends State<LsCreatePinView>
     Ok, jika alert muncul, dan kamu kembali ke halaman sebelum-nya
     Tasks ini selesai
     */
+    if (pin.length >= 4) return;
+    pin += number.toString();
+    setState(() {});
+    if (pin.length == 4) {
+      await mainStorage.put("pin", pin);
+      await showInfoDialog("Your PIN has been creates");
+      Get.back();
+    }
   }
 }

@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:example/config.dart';
 import 'package:example/core.dart';
 import 'package:flutter/material.dart';
@@ -136,6 +138,34 @@ class HtImageGalleriesController extends State<HtImageGalleriesView>
     12. Pilih file, dan lihatlah apakah gambar itu muncul
     Di dalam list, jika sudah muncul lanjut ke point 13
     */
+    FilePickerResult? result = await FilePicker.platform.pickFiles(
+      type: FileType.custom,
+      allowedExtensions: [
+        "png",
+        "jpg",
+      ],
+      allowMultiple: false,
+    );
+    if (result == null) return;
+    File file = File(result.files.single.path!);
+    String filePath = file.path;
+    final formData = FormData.fromMap({
+      'image': MultipartFile.fromBytes(
+        File(filePath).readAsBytesSync(),
+        filename: "upload.jpg",
+      ),
+    });
+
+    var res = await Dio().post(
+      'https://api.imgbb.com/1/upload?key=b55ef3fd02b80ab180f284e479acd7c4',
+      data: formData,
+    );
+
+    var data = res.data["data"];
+    var url = data["url"];
+    await addImage(url);
+    await loadImageGalleries();
+    hideLoading();
   }
 
   doUploadAndroidIosAndWeb() async {
@@ -171,5 +201,28 @@ class HtImageGalleriesController extends State<HtImageGalleriesView>
     file picker dan image picker, dan mengupload-nya ke
     file hosting!
     */
+    XFile? image = await ImagePicker().pickImage(
+      source: ImageSource.gallery,
+      imageQuality: 40,
+    );
+    String? filePath = image?.path;
+    if (filePath == null) return;
+    final formData = FormData.fromMap({
+      'image': MultipartFile.fromBytes(
+        File(filePath).readAsBytesSync(),
+        filename: "upload.jpg",
+      ),
+    });
+
+    var res = await Dio().post(
+      'https://api.imgbb.com/1/upload?key=b55ef3fd02b80ab180f284e479acd7c4',
+      data: formData,
+    );
+
+    var data = res.data["data"];
+    var url = data["url"];
+    await addImage(url);
+    await loadImageGalleries();
+    hideLoading();
   }
 }

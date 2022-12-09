@@ -1,6 +1,8 @@
 import 'package:example/core.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../config.dart';
+
 class HtLoginController extends State<HtLoginView> implements MvcController {
   static late HtLoginController instance;
   late HtLoginView view;
@@ -21,6 +23,25 @@ class HtLoginController extends State<HtLoginView> implements MvcController {
   String password = "123456";
 
   doLogin() async {
+    var response = await Dio().post(
+      "${AppConfig.baseUrl}/auth/action/login",
+      options: Options(
+        headers: {
+          "Content-Type": "application/json",
+        },
+      ),
+      data: {
+        "email": email,
+        "password": password,
+      },
+    );
+    Map obj = response.data;
+    if (obj["success"] == true) {
+      showInfoDialog("Login berhasil!");
+    } else {
+      showInfoDialog("Login Gagal!");
+    
+    }
     /*
     TODO: --
     1. Buat sebuah post request menggunakan DIO

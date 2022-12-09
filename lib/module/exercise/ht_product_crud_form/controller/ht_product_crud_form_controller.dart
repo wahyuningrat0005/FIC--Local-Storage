@@ -1,14 +1,26 @@
 import 'package:example/core.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../config.dart';
+
 class HtProductCrudFormController extends State<HtProductCrudFormView>
     implements MvcController {
   static late HtProductCrudFormController instance;
   late HtProductCrudFormView view;
+  String photo = "";
+  String productName = "";
+  double price = 0.0;
+  String description = "";
 
   @override
   void initState() {
     instance = this;
+    if (widget.item != null) {
+      photo = widget.item!["photo"];
+      productName = widget.item!["productName"];
+      price = widget.item!["price"];
+      description = widget.item["description"];
+    }
     /*
     TODO: --
     17. yuk kita atur nilai awal-nya
@@ -24,7 +36,9 @@ class HtProductCrudFormController extends State<HtProductCrudFormView>
 
     18. Kembali ke View, masuk ke point 19
     */
+    
     super.initState();
+    
   }
 
   @override
@@ -34,6 +48,10 @@ class HtProductCrudFormController extends State<HtProductCrudFormView>
   Widget build(BuildContext context) => widget.build(context, this);
 
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
+    
+    bool get isEditMode {
+    return widget.item != null;
+  }
 
   /*
   TODO: --
@@ -128,6 +146,21 @@ class HtProductCrudFormController extends State<HtProductCrudFormView>
     Lanjut ke point 10,
     Kembali ke HtProductCrudListController (Controller dari PRODUCT)
     */
+    var response = await Dio().post(
+    "${AppConfig.baseUrl}/products",
+    options: Options(
+    headers: {
+    "Content-Type": "application/json",
+    },
+    ),
+    data: {
+     "photo": photo,
+      "product_name": productName,
+      "price": price,
+      "description": description,
+    },
+    );
+    Map obj = response.data;
 
     //! ##########################
     //! Jangan edit kode dibawah

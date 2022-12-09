@@ -29,7 +29,7 @@ class HtProductCrudListView extends StatefulWidget {
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add),
         onPressed: () async {
-          await Get.to(const HtProductCrudFormView());
+          await Get.to(HtProductCrudFormView());
           await controller.loadProducts();
         },
       ),
